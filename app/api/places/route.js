@@ -23,7 +23,7 @@ const DISH_SEARCH = {
   'Bún thang': { categories: ['catering.restaurant.vietnamese', 'catering.restaurant.noodle'], terms: ['bun thang'] },
   'Xôi xéo': { categories: ['catering.restaurant.vietnamese'], terms: ['xoi xeo'] },
   'Bánh đa cua': { categories: ['catering.restaurant.vietnamese', 'catering.restaurant.noodle'], terms: ['banh da cua', 'banh da'] },
-  'Bánh tôm Hồ Tây': { categories: ['catering.restaurant.vietnamese'], terms: ['banh tom', 'ho tay'] },
+  'Bánh tôm': { categories: ['catering.restaurant.vietnamese'], terms: ['banh tom', 'ho tay'] },
   'Nem cua bể': { categories: ['catering.restaurant.vietnamese'], terms: ['nem cua be', 'nem cua'] },
   'Mì Quảng': { categories: ['catering.restaurant.vietnamese', 'catering.restaurant.noodle'], terms: ['mi quang'] },
   'Cao lầu': { categories: ['catering.restaurant.vietnamese', 'catering.restaurant.noodle'], terms: ['cao lau'] },

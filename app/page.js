@@ -7,7 +7,8 @@ function commonsImage(fileName) {
 }
 
 const FOOD_IMAGES = {
-  pho: 'https://unsplash.com/photos/m7rnjifC_yg/download?force=true&w=1200',
+  phobo: '/foods/pho-bo.jpg',
+  phoga: '/foods/pho-ga.webp',
   buncha: '/foods/bun-cha.webp',
   banhmi: 'https://unsplash.com/photos/sCAN9M2uaS0/download?force=true&w=1200',
   bunBoHue: 'https://unsplash.com/photos/rcHHKG01IPY/download?force=true&w=1200',
@@ -50,7 +51,8 @@ const FOOD_IMAGES = {
 };
 
 const DISHES = [
-  { name: 'Phở bò', category: 'Bún / Mì / Phở', price: '45–80k', fromPrice: 45000, image: FOOD_IMAGES.pho, regions: ['north', 'all'] },
+  { name: 'Phở bò', category: 'Bún / Mì / Phở', price: '45–80k', fromPrice: 45000, image: FOOD_IMAGES.phobo, regions: ['north', 'all'] },
+  { name: 'Phở gà', category: 'Bún / Mì / Phở', price: '45–80k', fromPrice: 45000, image: FOOD_IMAGES.phoga, regions: ['north', 'all'] },
   { name: 'Bún chả', category: 'Món Việt', price: '40–70k', fromPrice: 40000, image: FOOD_IMAGES.buncha, regions: ['north'] },
   { name: 'Bánh mì', category: 'Món Việt', price: '20–45k', fromPrice: 20000, image: FOOD_IMAGES.banhmi, regions: ['all'] },
   { name: 'Bún bò Huế', category: 'Bún / Mì / Phở', price: '45–75k', fromPrice: 45000, image: FOOD_IMAGES.bunBoHue, regions: ['central'] },
@@ -71,7 +73,7 @@ const DISHES = [
   { name: 'Bún thang', category: 'Bún / Mì / Phở', price: '45–80k', fromPrice: 45000, image: FOOD_IMAGES.bunThang, regions: ['north'] },
   { name: 'Xôi xéo', category: 'Món Việt', price: '20–45k', fromPrice: 20000, image: FOOD_IMAGES.xoiXeo, regions: ['north'] },
   { name: 'Bánh đa cua', category: 'Bún / Mì / Phở', price: '40–75k', fromPrice: 40000, image: FOOD_IMAGES.banhDaCua, regions: ['north'] },
-  { name: 'Bánh tôm Hồ Tây', category: 'Món Việt', price: '60–120k', fromPrice: 60000, image: FOOD_IMAGES.banhTom, regions: ['north'] },
+  { name: 'Bánh tôm', category: 'Món Việt', price: '60–120k', fromPrice: 60000, image: FOOD_IMAGES.banhTom, regions: ['north'] },
   { name: 'Nem cua bể', category: 'Món Việt', price: '50–100k', fromPrice: 50000, image: FOOD_IMAGES.nemCuaBe, regions: ['north', 'all'] },
   { name: 'Mì Quảng', category: 'Bún / Mì / Phở', price: '40–75k', fromPrice: 40000, image: FOOD_IMAGES.miQuang, regions: ['central'] },
   { name: 'Cao lầu', category: 'Bún / Mì / Phở', price: '45–80k', fromPrice: 45000, image: FOOD_IMAGES.caoLau, regions: ['central'] },
