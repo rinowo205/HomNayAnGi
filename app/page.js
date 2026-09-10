@@ -803,3 +803,76 @@ DISHES.push(
   { name: 'Bột chiên Sài Gòn', category: 'Món Việt', price: '20–50k', fromPrice: 20000, image: '/foods/placeholder.svg', regions: ['south'] },
   { name: 'Bún cá Châu Đốc', category: 'Bún / Mì / Phở', price: '40–80k', fromPrice: 40000, image: '/foods/placeholder.svg', regions: ['south'] },
 );
+
+
+// Regional expansion v2: deeper locality coverage. Prices are intentionally left unverified.
+DISHES.push(
+  // Miền Bắc · Hà Nội / Hà Giang / Sa Pa
+  { name: 'Miến gà Hà Nội', category: 'Bún / Mì / Phở', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Nội' },
+  { name: 'Mì vằn thắn Hà Nội', category: 'Bún / Mì / Phở', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Nội' },
+  { name: 'Xôi ngũ sắc Hà Giang', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Giang' },
+  { name: 'Cháo ấu tẩu Hà Giang', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Giang' },
+  { name: 'Bánh tam giác mạch Hà Giang', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Giang' },
+  { name: 'Thắng dền Hà Giang', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Giang' },
+  { name: 'Bánh chưng gù Hà Giang', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Giang' },
+  { name: 'Thịt trâu gác bếp', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Tây Bắc' },
+  { name: 'Lẩu cá hồi Sa Pa', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Sa Pa' },
+  { name: 'Cơm lam Bắc Mê', category: 'Cơm', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['north'], locality: 'Hà Giang' },
+
+  // Miền Trung · Huế / Đà Nẵng / Hội An / Nha Trang / Bình Định
+  { name: 'Bún cá sứa Nha Trang', category: 'Bún / Mì / Phở', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Nha Trang' },
+  { name: 'Nem nướng Nha Trang', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Khánh Hòa' },
+  { name: 'Bò nướng Lạc Cảnh', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Nha Trang' },
+  { name: 'Gỏi cá Nam Ô', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Đà Nẵng' },
+  { name: 'Bánh ép Huế', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Huế' },
+  { name: 'Cơm âm phủ Huế', category: 'Cơm', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Huế' },
+  { name: 'Cơm gà Hội An', category: 'Cơm', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Hội An' },
+  { name: 'Bánh xoài Hội An', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Hội An' },
+  { name: 'Bánh hỏi lòng heo', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Bình Định' },
+  { name: 'Bánh ít lá gai', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['central'], locality: 'Bình Định' },
+
+  // Miền Nam · Sài Gòn / Châu Đốc / Trà Vinh / Phú Quốc
+  { name: 'Bún cá bông điên điển Châu Đốc', category: 'Bún / Mì / Phở', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Châu Đốc' },
+  { name: 'Bánh bò thốt nốt', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Châu Đốc' },
+  { name: 'Cá kho tộ', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Tây Nam Bộ' },
+  { name: 'Bò lá lốt Sài Gòn', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'TP. Hồ Chí Minh' },
+  { name: 'Ốc Sài Gòn', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'TP. Hồ Chí Minh' },
+  { name: 'Bún kèn Phú Quốc', category: 'Bún / Mì / Phở', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Phú Quốc' },
+  { name: 'Bún quậy Phú Quốc', category: 'Bún / Mì / Phở', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Phú Quốc' },
+  { name: 'Gỏi cá trích Phú Quốc', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Phú Quốc' },
+  { name: 'Cá sòng nướng Phú Quốc', category: 'Món Việt', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Phú Quốc' },
+  { name: 'Bánh canh Bến Có', category: 'Bún / Mì / Phở', price: 'Theo quán', fromPrice: null, image: '/foods/placeholder.svg', regions: ['south'], locality: 'Trà Vinh' },
+);
+
+const REGIONAL_LOCALITY_BY_DISH = {
+  'Bún cá Hải Phòng': 'Hải Phòng',
+  'Bánh mì cay Hải Phòng': 'Hải Phòng',
+  'Chả mực Hạ Long': 'Quảng Ninh',
+  'Cơm cháy Ninh Bình': 'Ninh Bình',
+  'Dê tái chanh Ninh Bình': 'Ninh Bình',
+  'Phở chua Lạng Sơn': 'Lạng Sơn',
+  'Bánh cuốn Cao Bằng': 'Cao Bằng',
+  'Thắng cố': 'Tây Bắc',
+  'Bánh khoái Huế': 'Huế',
+  'Bánh bột lọc Huế': 'Huế',
+  'Bánh ram ít Huế': 'Huế',
+  'Bánh canh Nam Phổ': 'Huế',
+  'Bánh ướt thịt nướng': 'Huế',
+  'Bánh bao bánh vạc': 'Hội An',
+  'Hoành thánh Hội An': 'Hội An',
+  'Cơm gà Tam Kỳ': 'Quảng Nam',
+  'Bánh cống Cần Thơ': 'Cần Thơ / Sóc Trăng',
+  'Nem nướng miền Tây': 'Tây Nam Bộ',
+  'Hủ tiếu Nam Vang': 'Nam Bộ',
+  'Hủ tiếu Sa Đéc': 'Đồng Tháp',
+  'Lẩu mắm Châu Đốc': 'Châu Đốc',
+  'Cá lóc nướng trui': 'Tây Nam Bộ',
+  'Bột chiên Sài Gòn': 'TP. Hồ Chí Minh',
+  'Bún cá Châu Đốc': 'Châu Đốc',
+};
+
+for (const dish of DISHES) {
+  if (!dish.locality && REGIONAL_LOCALITY_BY_DISH[dish.name]) {
+    dish.locality = REGIONAL_LOCALITY_BY_DISH[dish.name];
+  }
+}
