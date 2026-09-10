@@ -713,3 +713,7 @@ img { display: block; width: 100%; }
 @media (max-width: 680px) {
   .region-hint { margin-left: 0; }
 }
+
+
+/* Keep the measurement card untransformed so reel centering uses its real layout width. */
+.reel-card:first-child { transform: none; }
