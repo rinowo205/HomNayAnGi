@@ -769,3 +769,37 @@ export default function Home() {
     </main>
   );
 }
+
+
+// Regional expansion: dishes with a strong local identity, grouped by their origin/association.
+DISHES.push(
+  // Miền Bắc
+  { name: 'Bún cá Hải Phòng', category: 'Bún / Mì / Phở', price: '40–70k', fromPrice: 40000, image: '/foods/placeholder.svg', regions: ['north'] },
+  { name: 'Bánh mì cay Hải Phòng', category: 'Món Việt', price: '20–40k', fromPrice: 20000, image: '/foods/placeholder.svg', regions: ['north'] },
+  { name: 'Chả mực Hạ Long', category: 'Món Việt', price: '70–150k', fromPrice: 70000, image: '/foods/placeholder.svg', regions: ['north'] },
+  { name: 'Cơm cháy Ninh Bình', category: 'Cơm', price: '30–70k', fromPrice: 30000, image: '/foods/placeholder.svg', regions: ['north'] },
+  { name: 'Dê tái chanh Ninh Bình', category: 'Món Việt', price: '100–200k', fromPrice: 100000, image: '/foods/placeholder.svg', regions: ['north'] },
+  { name: 'Phở chua Lạng Sơn', category: 'Bún / Mì / Phở', price: '35–65k', fromPrice: 35000, image: '/foods/placeholder.svg', regions: ['north'] },
+  { name: 'Bánh cuốn Cao Bằng', category: 'Món Việt', price: '30–60k', fromPrice: 30000, image: '/foods/placeholder.svg', regions: ['north'] },
+  { name: 'Thắng cố', category: 'Món Việt', price: '60–120k', fromPrice: 60000, image: '/foods/placeholder.svg', regions: ['north'] },
+
+  // Miền Trung
+  { name: 'Bánh khoái Huế', category: 'Món Việt', price: '40–80k', fromPrice: 40000, image: '/foods/placeholder.svg', regions: ['central'] },
+  { name: 'Bánh bột lọc Huế', category: 'Món Việt', price: '30–60k', fromPrice: 30000, image: '/foods/placeholder.svg', regions: ['central'] },
+  { name: 'Bánh ram ít Huế', category: 'Món Việt', price: '30–60k', fromPrice: 30000, image: '/foods/placeholder.svg', regions: ['central'] },
+  { name: 'Bánh canh Nam Phổ', category: 'Bún / Mì / Phở', price: '35–65k', fromPrice: 35000, image: '/foods/placeholder.svg', regions: ['central'] },
+  { name: 'Bánh ướt thịt nướng', category: 'Món Việt', price: '40–80k', fromPrice: 40000, image: '/foods/placeholder.svg', regions: ['central'] },
+  { name: 'Bánh bao bánh vạc', category: 'Món Việt', price: '40–80k', fromPrice: 40000, image: '/foods/placeholder.svg', regions: ['central'] },
+  { name: 'Hoành thánh Hội An', category: 'Bún / Mì / Phở', price: '45–85k', fromPrice: 45000, image: '/foods/placeholder.svg', regions: ['central'] },
+  { name: 'Cơm gà Tam Kỳ', category: 'Cơm', price: '45–85k', fromPrice: 45000, image: '/foods/placeholder.svg', regions: ['central'] },
+
+  // Miền Nam
+  { name: 'Bánh cống Cần Thơ', category: 'Món Việt', price: '30–60k', fromPrice: 30000, image: '/foods/placeholder.svg', regions: ['south'] },
+  { name: 'Nem nướng miền Tây', category: 'Món Việt', price: '45–90k', fromPrice: 45000, image: '/foods/placeholder.svg', regions: ['south'] },
+  { name: 'Hủ tiếu Nam Vang', category: 'Bún / Mì / Phở', price: '45–80k', fromPrice: 45000, image: '/foods/placeholder.svg', regions: ['south'] },
+  { name: 'Hủ tiếu Sa Đéc', category: 'Bún / Mì / Phở', price: '40–75k', fromPrice: 40000, image: '/foods/placeholder.svg', regions: ['south'] },
+  { name: 'Lẩu mắm Châu Đốc', category: 'Món Việt', price: '150–300k', fromPrice: 150000, image: '/foods/placeholder.svg', regions: ['south'] },
+  { name: 'Cá lóc nướng trui', category: 'Món Việt', price: '120–250k', fromPrice: 120000, image: '/foods/placeholder.svg', regions: ['south'] },
+  { name: 'Bột chiên Sài Gòn', category: 'Món Việt', price: '20–50k', fromPrice: 20000, image: '/foods/placeholder.svg', regions: ['south'] },
+  { name: 'Bún cá Châu Đốc', category: 'Bún / Mì / Phở', price: '40–80k', fromPrice: 40000, image: '/foods/placeholder.svg', regions: ['south'] },
+);

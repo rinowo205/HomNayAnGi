@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900" role="img" aria-label="Ảnh món ăn đang cập nhật">
+  <rect width="1200" height="900" fill="#efe7d8"/>
+  <circle cx="600" cy="380" r="190" fill="#fffaf0" stroke="#181712" stroke-width="18"/>
+  <path d="M430 390c30 150 95 215 170 215s140-65 170-215H430Z" fill="#ed5b2a" stroke="#181712" stroke-width="18"/>
+  <path d="M500 300c-35-60 45-80 10-145M600 285c-35-60 45-80 10-145M700 300c-35-60 45-80 10-145" fill="none" stroke="#181712" stroke-width="16" stroke-linecap="round"/>
+  <text x="600" y="705" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="56" font-weight="700" fill="#181712">ẢNH ĐANG CẬP NHẬT</text>
+  <text x="600" y="775" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" letter-spacing="5" fill="#c94419">HÔM NAY ĂN GÌ?</text>
+</svg>
