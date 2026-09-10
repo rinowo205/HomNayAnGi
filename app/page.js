@@ -106,6 +106,61 @@ const REGION_OPTIONS = [
   { id: 'south', label: 'Miền Nam' },
 ];
 const REGION_LABELS = { north: 'Miền Bắc', central: 'Miền Trung', south: 'Miền Nam' };
+const SHOPEE_FOOD_CITY_SLUGS = {
+  'ho chi minh': 'ho-chi-minh',
+  'tp hcm': 'ho-chi-minh',
+  tphcm: 'ho-chi-minh',
+  'sai gon': 'ho-chi-minh',
+  saigon: 'ho-chi-minh',
+  'ha noi': 'ha-noi',
+  'da nang': 'da-nang',
+  'can tho': 'can-tho',
+  'hai phong': 'hai-phong',
+  hue: 'hue',
+  'thua thien hue': 'hue',
+  'khanh hoa': 'khanh-hoa',
+  'dong nai': 'dong-nai',
+  'nghe an': 'nghe-an',
+  'vung tau': 'vung-tau',
+  'ba ria vung tau': 'vung-tau',
+  'an giang': 'an-giang',
+  'bac lieu': 'bac-lieu',
+  'bac giang': 'bac-giang',
+  'bac ninh': 'bac-ninh',
+  'ben tre': 'ben-tre',
+  'binh duong': 'binh-duong',
+  'binh dinh': 'binh-dinh',
+  'binh phuoc': 'binh-phuoc',
+  'binh thuan': 'binh-thuan',
+  'ca mau': 'ca-mau',
+  'dak lak': 'dak-lak',
+  'dac lak': 'dak-lak',
+  'dong thap': 'dong-thap',
+  'gia lai': 'gia-lai',
+  'hai duong': 'hai-duong',
+  'hau giang': 'hau-giang',
+  'hung yen': 'hung-yen',
+  'kien giang': 'kien-giang',
+  'lam dong': 'lam-dong',
+  'long an': 'long-an',
+  'nam dinh': 'nam-dinh',
+  'ninh thuan': 'ninh-thuan',
+  'phu tho': 'phu-tho',
+  'phu yen': 'phu-yen',
+  'quang binh': 'quang-binh',
+  'quang nam': 'quang-nam',
+  'quang ngai': 'quang-ngai',
+  'quang ninh': 'quang-ninh',
+  'soc trang': 'soc-trang',
+  'tay ninh': 'tay-ninh',
+  'thai binh': 'thai-binh',
+  'thai nguyen': 'thai-nguyen',
+  'thanh hoa': 'thanh-hoa',
+  'tien giang': 'tien-giang',
+  'tra vinh': 'tra-vinh',
+  'vinh long': 'vinh-long',
+  'vinh phuc': 'vinh-phuc',
+};
 const REEL_DURATION = 5000;
 const REEL_WINNER_INDEX = 64;
 const REEL_ITEM_COUNT = 72;
@@ -171,8 +226,21 @@ function grabFoodUrl(searchText) {
   return `https://food.grab.com/vn/vi/restaurants?search=${value}&searchParameter=${value}&support-deeplink=true`;
 }
 
-function shopeeFoodUrl(searchText) {
-  return `https://shopeefood.vn/ha-noi/danh-sach-dia-diem-giao-tan-noi?q=${encodeURIComponent(searchText)}`;
+function normalizeShopeeFoodArea(area) {
+  return String(area || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[đĐ]/g, 'd')
+    .replace(/[^a-zA-Z0-9]+/g, ' ')
+    .toLowerCase()
+    .trim()
+    .replace(/^(thanh pho|tinh)\s+/, '');
+}
+
+function shopeeFoodUrl(searchText, area) {
+  const citySlug = SHOPEE_FOOD_CITY_SLUGS[normalizeShopeeFoodArea(area)];
+  if (!citySlug) return 'https://shopeefood.vn/';
+  return `https://shopeefood.vn/${citySlug}/danh-sach-dia-diem-giao-tan-noi?q=${encodeURIComponent(searchText)}`;
 }
 
 export default function Home() {
@@ -397,14 +465,21 @@ export default function Home() {
     setSpinning(true);
     setPreferenceNotice('');
 
-    let coordsPromise;
+    const coordsPromise = getPosition();
     let currentRegion = detectedRegion;
+    const shouldResolveArea = regionState === 'idle' && (!detectedArea || (regionMode === 'auto' && !detectedRegion));
+    const regionPromise = shouldResolveArea
+      ? coordsPromise.then(async (coords) => {
+          if (!coords) {
+            setRegionState('unknown');
+            return null;
+          }
+          return detectRegion(coords);
+        })
+      : Promise.resolve(detectedRegion);
+
     if (regionMode === 'auto' && !detectedRegion) {
-      const coords = await getPosition();
-      coordsPromise = Promise.resolve(coords);
-      currentRegion = await detectRegion(coords);
-    } else {
-      coordsPromise = getPosition();
+      currentRegion = await regionPromise;
     }
 
     const selectionPool = weightedPool(eligibleDishes, regionMode, currentRegion);
@@ -618,7 +693,7 @@ export default function Home() {
             </div>
             <div className="delivery-search-actions">
               <a className="platform-search grab-search" href={grabFoodUrl(selectedDish.name)} target="_blank" rel="noreferrer">Tìm trên GrabFood</a>
-              <a className="platform-search shopee-search" href={shopeeFoodUrl(selectedDish.name)} target="_blank" rel="noreferrer">Tìm trên ShopeeFood</a>
+              <a className="platform-search shopee-search" href={shopeeFoodUrl(selectedDish.name, detectedArea)} target="_blank" rel="noreferrer">Tìm trên ShopeeFood</a>
             </div>
           </div>
 
